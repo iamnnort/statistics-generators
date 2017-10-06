@@ -10,10 +10,10 @@ export default class GammaGenerator extends Generator {
 
   calculate() {
     let composition = 1;
-    for(let i = 0; i < this.n; i++) {
+    for (let i = 0; i < this.n; i++) {
       composition *= this.generateR0() / this.m;
     }
-    
+
     return -1 / this.lambda * Math.log(composition);
   }
 }

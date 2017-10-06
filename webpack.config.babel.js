@@ -13,17 +13,17 @@ export default {
     './src/sass/app.scss',
   ],
   output: {
-      path: path.resolve(__dirname, 'public'),
-      filename: jsOutputPath,
+    path: path.resolve(__dirname, 'public'),
+    filename: jsOutputPath,
   },
   resolve: {
-    extensions: ['.js', '.scss', '.css']
+    extensions: ['.js', '.scss', '.css'],
   },
   watch: true,
   devServer: {
-    contentBase: path.join(__dirname, "public"),
+    contentBase: path.join(__dirname, 'public'),
     compress: true,
-    port: 9000
+    port: 9000,
   },
   module: {
     loaders: [
@@ -35,8 +35,8 @@ export default {
           options: {
             presets: ['env'],
             plugins: [
-                'transform-runtime',
-                'transform-object-rest-spread'
+              'transform-runtime',
+              'transform-object-rest-spread',
             ],
           },
         },
@@ -50,22 +50,22 @@ export default {
         use: ExtractSASS.extract({
           use: [
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
                 sourceMap: true,
                 minimize: true,
-              }
+              },
             },
             {
-              loader: "sass-loader",
+              loader: 'sass-loader',
               options: {
-                sourceMap: true
-              }
-            }
+                sourceMap: true,
+              },
+            },
           ],
-          fallback: "style-loader"
+          fallback: 'style-loader',
         }),
-      },{
+      }, {
         test: /\.css$/,
         include: [
           path.resolve(__dirname, 'node_modules'),
@@ -73,14 +73,14 @@ export default {
         ],
         use: [
           'style-loader',
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
     ],
   },
   plugins: [
     new ExtractTextPlugin(path.resolve(__dirname, `public/${cssOutputPath}`), {
-        allChunks: true,
+      allChunks: true,
     }),
     ExtractSASS,
   ],

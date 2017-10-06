@@ -10,7 +10,7 @@ export default class EvenGenerator extends Generator {
 
   calculate() {
     this.generateR0();
-    
+
     return this.min + (this.max - this.min) * this.r0 / this.m;
   }
 }

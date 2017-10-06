@@ -9,12 +9,12 @@ export default class SimpsonGenerator extends Generator {
     this.min /= 2;
     this.max /= 2;
   }
-  
+
   calculate() {
     const firstR0 = this.generateR0() / this.m;
     const secondR0 = this.generateR0() / this.m;
-    
+
     return this.min + (this.max - this.min) * firstR0
-      + this.min + (this.max - this.min) * secondR0;
+        + this.min + (this.max - this.min) * secondR0;
   }
 }

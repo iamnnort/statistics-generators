@@ -4,7 +4,7 @@ export default class ExponentialGenerator extends Generator {
   constructor({lambda, a, r0, m}, size, numOfIntervals) {
     super({a, r0, m}, size, numOfIntervals);
 
-    this.lambda = parseFloat(lambda); 
+    this.lambda = parseFloat(lambda);
   }
 
   calculate() {
