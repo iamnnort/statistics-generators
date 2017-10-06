@@ -35,15 +35,12 @@ export default class Generator {
     let leftBorder = min;
     let rightBorder = min + delta;
 
-    for (let i = 0; i <
-    this.numOfIntervals; i++, leftBorder += delta, rightBorder += delta) {
+    for (let i = 0; i < this.numOfIntervals; i++, leftBorder += delta, rightBorder += delta) {
       this.labels.push(leftBorder.toFixed(2) + ' - ' + rightBorder.toFixed(2));
-      this.entries.push(this.list.filter(
-          item => item >= leftBorder && item < rightBorder).length);
+      this.entries.push(this.list.filter(item => item >= leftBorder && item < rightBorder).length);
     }
 
-    this.entries[this.numOfIntervals - 1] += this.list.reduce(
-        item => item === max ? 1 : 0, 0);
+    this.entries[this.numOfIntervals - 1] += this.list.reduce(item => item === max ? 1 : 0, 0);
   }
 
   getExpectation(precision = 9) {

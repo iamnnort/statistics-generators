@@ -15,7 +15,6 @@ export default class GaussianGenerator extends Generator {
       sumR0 += this.generateR0() / this.m;
     }
 
-    return this.mx +
-        this.std * Math.sqrt(12 / this.n) * (sumR0 - this.n / 2);
+    return this.mx + this.std * Math.sqrt(12 / this.n) * (sumR0 - this.n / 2);
   }
 }

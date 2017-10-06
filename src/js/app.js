@@ -19,7 +19,7 @@ document.getElementById('generatorActions').
           const min = document.getElementById('minParam').value;
           const max = document.getElementById('maxParam').value;
 
-          generator = new EvenGenerator({min, max, a, r0, m}, 10000);
+          generator = new EvenGenerator({min, max, a, r0, m}, 1000000);
           break;
         }
         case 'gaussian': {
@@ -27,34 +27,34 @@ document.getElementById('generatorActions').
           const mx = document.getElementById('mxParam').value;
           const std = document.getElementById('stdParam').value;
 
-          generator = new GaussianGenerator({n, mx, std, a, r0, m}, 1000);
+          generator = new GaussianGenerator({n, mx, std, a, r0, m}, 1000000);
           break;
         }
         case 'exponential': {
           const lambda = document.getElementById('lambdaParam').value;
 
-          generator = new ExponentialGenerator({lambda, a, r0, m}, 1000);
+          generator = new ExponentialGenerator({lambda, a, r0, m}, 1000000);
           break;
         }
         case 'gamma': {
           const lambda = document.getElementById('lambdaParam').value;
           const n = document.getElementById('nParam').value;
 
-          generator = new GammaGenerator({lambda, n, a, r0, m}, 1000);
+          generator = new GammaGenerator({lambda, n, a, r0, m}, 1000000);
           break;
         }
         case 'triangle': {
           const min = document.getElementById('minParam').value;
           const max = document.getElementById('maxParam').value;
 
-          generator = new TriangleGenerator({min, max, a, r0, m}, 1000);
+          generator = new TriangleGenerator({min, max, a, r0, m}, 1000000);
           break;
         }
         case 'simpson': {
           const min = document.getElementById('minParam').value;
           const max = document.getElementById('maxParam').value;
 
-          generator = new SimpsonGenerator({min, max, a, r0, m}, 1000);
+          generator = new SimpsonGenerator({min, max, a, r0, m}, 1000000);
           break;
         }
       }
